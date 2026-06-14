@@ -2,11 +2,11 @@
 
 import type { LabelProps } from '@/types/ui/Label'
 
-export function Label({ required, children, ...props }: LabelProps) {
+export function Label({ required, children, className, ...props }: LabelProps) {
   return (
-    <label {...props}>
+    <label className={`field-label ${className ?? ''}`} {...props}>
       {children}
-      {required && <span aria-hidden="true"> *</span>}
+      {required && <span aria-hidden="true" className="text-red-400 ml-0.5">*</span>}
     </label>
   )
 }

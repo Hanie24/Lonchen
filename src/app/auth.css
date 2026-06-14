@@ -1,0 +1,86 @@
+@layer components {
+  /* ── Shell layout ───────────────────────────── */
+  .auth-shell {
+    @apply min-h-full w-full flex mx-auto max-w-[1920px];
+  }
+
+  .auth-brand-panel {
+    @apply hidden lg:flex flex-col relative overflow-hidden;
+    @apply bg-navy blueprint flex-1 p-12 xl:p-16 border-r border-ink-3;
+  }
+
+  .auth-logo-icon {
+    @apply w-9 h-9 rounded-md bg-mint flex items-center justify-center;
+  }
+
+  .auth-logo-text {
+    @apply font-cond font-800 text-2xl tracking-[0.18em] text-mint;
+  }
+
+  .auth-headline {
+    @apply font-cond font-800 text-[64px] xl:text-[76px] leading-[0.9] tracking-tight text-fg;
+  }
+
+  .auth-caption {
+    @apply text-fg-sub text-[15px] leading-relaxed mt-6 max-w-sm;
+  }
+
+  .auth-mobile-logo {
+    @apply lg:hidden flex items-center gap-2.5 mb-10;
+  }
+
+  .auth-form-col {
+    @apply flex-1 lg:flex-none lg:w-[480px] xl:w-[560px];
+    @apply flex items-start lg:justify-center dotgrid min-h-full;
+  }
+
+  .auth-form-inner {
+    @apply w-full max-w-[400px] px-4 sm:px-10 lg:px-6 pt-8 sm:pt-10 lg:pt-12 pb-14;
+  }
+
+  /* ── Tipografía ──────────────────────────────── */
+  .auth-title {
+    @apply font-cond font-800 text-[34px] leading-none text-fg tracking-tight;
+  }
+
+  .auth-link {
+    @apply text-mint font-600 hover:underline;
+  }
+
+  .auth-title-sm {
+    @apply font-cond font-800 text-[28px] leading-none text-fg tracking-tight;
+  }
+
+  .step-form {
+    @apply flex flex-col gap-5 fadein;
+  }
+
+  .step-actions {
+    @apply mt-2;
+  }
+
+  .step-counter {
+    @apply font-cond font-700 text-[12px] tracking-[0.14em] uppercase text-mint;
+  }
+
+  .step-name {
+    @apply font-cond font-600 text-[12px] tracking-[0.1em] uppercase text-fg-dim;
+  }
+
+  .step-bar-track {
+    @apply flex-1 h-1.5 rounded-full overflow-hidden bg-ink-3;
+  }
+
+  .step-bar-fill {
+    @apply h-full rounded-full transition-all duration-500;
+  }
+
+  .auth-link-back {
+    @apply text-sm text-fg-sub hover:text-mint transition py-1;
+  }
+
+  .auth-back-btn {
+    @apply w-9 h-9 rounded-lg bg-ink-2 border border-ink-3 text-fg-sub;
+    @apply hover:bg-ink-3 transition flex items-center justify-center shrink-0;
+  }
+}

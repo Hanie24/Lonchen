@@ -2,4 +2,6 @@ export interface FormFieldProps extends React.InputHTMLAttributes<HTMLInputEleme
   label: string
   error?: string
   required?: boolean
+  hint?: string
+  prefix?: string
 }

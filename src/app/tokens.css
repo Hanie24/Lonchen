@@ -1,0 +1,25 @@
+@theme {
+  /* ── Colores ─────────────────────────────────── */
+  --color-mint:     #2AD4AE;
+  --color-mint-600: #1FB897;
+  --color-mint-700: #189A7F;
+  --color-navy:     #09161F;
+  --color-ink-1:    #0F1D2B;
+  --color-ink-2:    #162638;
+  --color-ink-3:    #1C3248;
+  --color-ink-4:    #244060;
+  --color-yellow:   #F4C84A;
+  --color-fg:       #E4F2EE;
+  --color-fg-sub:   #80AAA0;
+  --color-fg-dim:   #3A6258;
+
+  /* ── Tipografía ─────────────────────────────── */
+  --font-cond: var(--font-barlow-condensed), sans-serif;
+  --font-ui:   var(--font-space-grotesk), sans-serif;
+
+  /* ── Pesos ──────────────────────────────────── */
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+}

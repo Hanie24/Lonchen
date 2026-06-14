@@ -7,6 +7,7 @@ import type { RegisterResult } from '@/types/actions/RegisterResult'
 import type { LoginResult } from '@/types/actions/LoginResult'
 import type { LoginData } from '@/lib/validations/auth'
 import { roleRedirect } from '@/lib/utils/roleRedirect'
+import type { Role } from '@/types/database'
 
 export async function registerAction(data: RegisterData): Promise<RegisterResult> {
   const supabase = await createClient()
@@ -61,5 +62,5 @@ export async function loginAction(data: LoginData): Promise<LoginResult> {
 
   if (!profile) return { error: 'Perfil no encontrado' }
 
-  redirect(roleRedirect[profile.role] ?? '/waiter')
+  redirect(roleRedirect[profile.role as Role] ?? '/waiter')
 }

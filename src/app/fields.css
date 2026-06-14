@@ -1,0 +1,35 @@
+@layer components {
+  .input {
+    @apply w-full bg-ink-1 border rounded-lg text-fg text-[15px] py-3 outline-none transition;
+    @apply hover:border-ink-4 focus:border-mint focus:ring-2 focus:ring-mint/20;
+  }
+
+  .field-label {
+    @apply block font-cond font-600 text-[11px] tracking-[0.14em] uppercase text-fg-sub mb-2;
+  }
+
+  .field-wrapper {
+    @apply flex items-center bg-ink-1 border rounded-lg transition;
+    @apply hover:border-ink-4 focus-within:border-mint focus-within:ring-2 focus-within:ring-mint/20;
+  }
+
+  .field-prefix {
+    @apply pl-3.5 text-fg-dim text-sm font-ui select-none pointer-events-none shrink-0 whitespace-nowrap;
+  }
+
+  .field-input {
+    @apply flex-1 min-w-0 bg-transparent text-fg text-[15px] py-3 outline-none;
+  }
+
+  .field-hint {
+    @apply block text-[11px] text-fg-dim mt-1.5;
+  }
+
+  .field-error {
+    @apply block text-[11px] text-red-400 mt-1.5;
+  }
+
+  .form-error {
+    @apply text-sm text-red-400;
+  }
+}

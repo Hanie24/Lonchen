@@ -1,0 +1,17 @@
+@layer components {
+  .btn {
+    @apply w-full rounded-lg transition;
+    @apply disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply bg-mint hover:bg-mint-600 active:bg-mint-700 text-navy;
+    @apply font-cond font-700 text-[15px] tracking-[0.1em] uppercase;
+    @apply py-3.5 flex items-center justify-center gap-2;
+  }
+
+  .btn-ghost {
+    @apply bg-ink-2 hover:bg-ink-3 text-fg-sub border border-ink-3;
+    @apply font-ui font-500 text-sm py-3;
+  }
+}

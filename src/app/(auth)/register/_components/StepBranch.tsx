@@ -13,22 +13,34 @@ export function StepBranch({ onNext, isLoading, error }: StepBranchProps) {
   })
 
   return (
-    <form onSubmit={handleSubmit(onNext)}>
+    <form onSubmit={handleSubmit(onNext)} className="step-form">
       <FormField
         label="Nombre de la sucursal"
         id="branch_name"
-        required
+        placeholder="Sucursal Centro"
         error={errors.branch_name?.message}
         {...register('branch_name')}
       />
       <FormField
         label="Dirección"
         id="address"
+        placeholder="Calle, número, colonia (opcional)"
+        hint="Opcional — puedes agregarla después desde el panel."
         error={errors.address?.message}
         {...register('address')}
       />
-      {error && <p role="alert">{error}</p>}
-      <Button type="submit" loading={isLoading}>Crear cuenta</Button>
+      {error && (
+        <p role="alert" className="form-error">{error}</p>
+      )}
+      <div className="step-actions">
+        <Button type="submit" loading={isLoading}>
+          Crear cuenta
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M2 7l3.5 3.5L12 3" stroke="currentColor" strokeWidth="1.7"
+              strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </Button>
+      </div>
     </form>
   )
 }

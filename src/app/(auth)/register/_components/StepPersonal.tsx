@@ -13,11 +13,11 @@ export function StepPersonal({ onNext }: StepPersonalProps) {
   })
 
   return (
-    <form onSubmit={handleSubmit(onNext)}>
+    <form onSubmit={handleSubmit(onNext)} className="step-form">
       <FormField
         label="Nombre completo"
         id="full_name"
-        required
+        placeholder="Ana García"
         error={errors.full_name?.message}
         {...register('full_name')}
       />
@@ -25,7 +25,7 @@ export function StepPersonal({ onNext }: StepPersonalProps) {
         label="Email"
         id="email"
         type="email"
-        required
+        placeholder="ana@turestaurante.mx"
         error={errors.email?.message}
         {...register('email')}
       />
@@ -33,11 +33,14 @@ export function StepPersonal({ onNext }: StepPersonalProps) {
         label="Contraseña"
         id="password"
         type="password"
-        required
+        placeholder="Mínimo 8 caracteres"
+        hint="Usa al menos 8 caracteres con una mayúscula y un número."
         error={errors.password?.message}
         {...register('password')}
       />
-      <Button type="submit">Continuar</Button>
+      <div className="step-actions">
+        <Button type="submit">Continuar</Button>
+      </div>
     </form>
   )
 }

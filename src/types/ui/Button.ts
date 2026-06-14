@@ -1,4 +1,4 @@
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   loading?: boolean
-  variant?: 'primary' | 'outline'
+  variant?: 'primary' | 'ghost'
 }
